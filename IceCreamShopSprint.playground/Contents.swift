@@ -10,3 +10,13 @@ struct Flavor {
     var name: String
     var rating: Double
 }
+
+struct Cone {
+    let flavor: String
+    let topping: String
+    let size: Size
+    
+    func eat() {
+        print("Mmm, I love \(flavor)!")
+    }
+}
