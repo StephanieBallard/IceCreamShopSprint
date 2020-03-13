@@ -50,11 +50,13 @@ let flavor6 = Flavor(name: "Cookies n Cream", rating: 3.8)
 var flavors = [flavor1, flavor2, flavor3, flavor4, flavor5, flavor6]
 
 func listTopFlavors() {
+    var topFlavors = "Our top flavors are "
     for flavor in flavors {
         if flavor.rating > 4.0 {
-            print("One of our top flavors is \(flavor.name)! ")
+            topFlavors += "\(flavor.name) "
         }
     }
+    print(topFlavors)
 }
 
 listTopFlavors()
