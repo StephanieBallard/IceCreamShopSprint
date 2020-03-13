@@ -6,11 +6,6 @@ enum Size: Double {
     case large = 6.99
 }
 
-enum Topping {
-    case sprinkles
-    case whippedcream
-    case gummybears
-}
 struct Flavor {
     var name: String
     var rating: Double
@@ -18,7 +13,7 @@ struct Flavor {
 
 struct Cone {
     let flavor: String
-    let topping: String
+    let topping: String?
     let size: Size
     
     func eat() {
@@ -29,10 +24,10 @@ struct Cone {
 class IceCreamShop {
     var flavors: [Flavor]
     var sizes: [Size]
-    var toppings: [Topping]
+    var toppings: String?
     var totalSales: Double
     
-    init(flavors: [Flavor], sizes: [Size], toppings: [Topping], totalSales: Double) {
+    init(flavors: [Flavor], sizes: [Size], toppings: String, totalSales: Double) {
         self.flavors = flavors
         self.sizes = sizes
         self.toppings = toppings
@@ -60,3 +55,7 @@ func listTopFlavors() {
 }
 
 listTopFlavors()
+
+func orderCone(flavor: String, topping: String?, size: Size) -> Cone {
+    let newCone = Cone(flavor: flavor, topping: topping ?? "No Topping", size: size)
+}
