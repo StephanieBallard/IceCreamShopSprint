@@ -87,4 +87,7 @@ let newCone = Cone(flavor: flavor5.name, topping: toppings[1], size: Size.large)
 newCone.eat()
 
 // Step 12
-
+func printTotalSales() {
+    print(newCone.size.rawValue)
+}
+printTotalSales()
