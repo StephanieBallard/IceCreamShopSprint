@@ -83,3 +83,8 @@ listTopFlavors()
 // Step 10
 let newCone = Cone(flavor: flavor5.name, topping: toppings[1], size: Size.large)
 
+// Step 11
+newCone.eat()
+
+// Step 12
+
